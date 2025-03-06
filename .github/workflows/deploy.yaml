@@ -32,7 +32,7 @@ jobs:
 
       - name: Archive project files
         run: |
-          tar -czvf real-estate-prices.tar.gz real-estate-prices-backend.tar frontend/build
+          tar -czvf real-estate-prices.tar.gz real-estate-prices-backend.tar -C frontend build
 
       - name: Copy files to Server via SSH
         uses: appleboy/scp-action@master
@@ -55,7 +55,7 @@ jobs:
 
             # Deploy Frontend
             rm -rf /var/www/html/*
-            cp -r frontend/build/* /var/www/html/
+            cp -r build/* /var/www/html/
 
             # Deploy Backend Docker Image
             docker load -i real-estate-prices-backend.tar

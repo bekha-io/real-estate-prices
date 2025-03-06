@@ -25,7 +25,7 @@
   async function submitForm() {
     loading = true;
     price = null;
-    const response = await axios.post("http://127.0.0.1:8000/", {
+    const response = await axios.post("https://real-estate.bekhruz.me/", {
       area,
       floor,
       has_heating,
