@@ -19,7 +19,7 @@ jobs:
           node-version: "20"
 
       - name: Build Svelte frontend
-        working-directory: ./landing
+        working-directory: ./frontend
         run: |
           npm install
           npm run build
