@@ -1,0 +1,14 @@
+version: "3.0"
+
+tasks:
+  install:
+    aliases:
+      - i
+    cmds:
+      - source .venv/bin/activate && pip install -r requirements.txt
+  
+  run:
+    aliases:
+      - server
+    cmds:
+      - cd backend && .venv/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8000
