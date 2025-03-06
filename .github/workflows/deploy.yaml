@@ -32,7 +32,7 @@ jobs:
 
       - name: Archive project files
         run: |
-          tar -czvf real-estate-prices.tar.gz real-estate-prices-backend.tar -C frontend build
+          tar -czvf real-estate-prices.tar.gz real-estate-prices-backend.tar -C frontend dist
 
       - name: Copy files to Server via SSH
         uses: appleboy/scp-action@master
